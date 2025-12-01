@@ -13,7 +13,7 @@ const app = express();
 app.use(cors({
   origin: '*',                          // allow all frontends
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
-  allowedHeaders: ['Content-Type', 'Authorization'],
+  allowedHeaders: ['Content-Type', 'Authorization', 'x-auth-token'],
 }));
 
 app.use(express.json());
@@ -35,7 +35,7 @@ const MONGO_URI = process.env.MONGO_URI || 'mongodb://localhost:27017/farmconnec
 
 console.log('Attempting to connect to:', MONGO_URI);
 mongoose.connect(MONGO_URI)
-    .then(() => console.log('MongoDB Connected'))
-    .catch(err => console.log('MongoDB Connection Error:', err));
+  .then(() => console.log('MongoDB Connected'))
+  .catch(err => console.log('MongoDB Connection Error:', err));
 
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
