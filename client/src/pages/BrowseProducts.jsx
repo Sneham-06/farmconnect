@@ -14,7 +14,7 @@ const BrowseProducts = () => {
 
     const fetchProducts = async () => {
         try {
-            const res = await axios.get('http://localhost:5000/products/public', {
+            const res = await axios.get('https://farmconnect-backend-m1p3.onrender.com/products/public', {
                 headers: { 'x-auth-token': token }
             });
             setProducts(res.data);
@@ -36,7 +36,7 @@ const BrowseProducts = () => {
     const handlePlaceOrder = async (e) => {
         e.preventDefault();
         try {
-            await axios.post('http://localhost:5000/orders', {
+            await axios.post('https://farmconnect-backend-m1p3.onrender.com/orders', {
                 product_id: selectedProduct._id,
                 quantity_kg: orderQuantity,
                 payment_method: paymentMethod

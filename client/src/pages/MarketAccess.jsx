@@ -12,12 +12,12 @@ const MarketAccess = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const pricesRes = await axios.get('http://localhost:5000/market/prices', {
+                const pricesRes = await axios.get('https://farmconnect-backend-m1p3.onrender.com/market/prices', {
                     headers: { 'x-auth-token': token }
                 });
                 setPrices(pricesRes.data);
 
-                const oppsRes = await axios.get('http://localhost:5000/market/opportunities', {
+                const oppsRes = await axios.get('https://farmconnect-backend-m1p3.onrender.com/market/opportunities', {
                     headers: { 'x-auth-token': token }
                 });
                 setOpportunities(oppsRes.data);
@@ -41,7 +41,7 @@ const MarketAccess = () => {
                         <div className="flex justify-between items-start mb-4">
                             <h3 className="text-lg font-bold text-gray-800">{price.commodity_name}</h3>
                             <span className={`px-2 py-1 text-xs rounded-full ${price.level === 'high' ? 'bg-green-100 text-green-800' :
-                                    price.level === 'low' ? 'bg-red-100 text-red-800' : 'bg-yellow-100 text-yellow-800'
+                                price.level === 'low' ? 'bg-red-100 text-red-800' : 'bg-yellow-100 text-yellow-800'
                                 }`}>
                                 {price.level.toUpperCase()}
                             </span>

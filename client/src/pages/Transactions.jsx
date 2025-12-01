@@ -10,7 +10,7 @@ const Transactions = () => {
     useEffect(() => {
         const fetchTransactions = async () => {
             try {
-                const res = await axios.get('http://localhost:5000/transactions', {
+                const res = await axios.get('https://farmconnect-backend-m1p3.onrender.com/transactions', {
                     headers: { 'x-auth-token': token }
                 });
                 setTransactions(res.data);

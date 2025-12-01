@@ -17,8 +17,8 @@ const Dashboard = () => {
         const fetchData = async () => {
             try {
                 const endpoint = user.role === 'farmer'
-                    ? 'http://localhost:5000/dashboard/farmer-summary'
-                    : 'http://localhost:5000/dashboard/consumer-summary';
+                    ? 'https://farmconnect-backend-m1p3.onrender.com/dashboard/farmer-summary'
+                    : 'https://farmconnect-backend-m1p3.onrender.com/dashboard/consumer-summary';
 
                 const res = await axios.get(endpoint, {
                     headers: { 'x-auth-token': token }

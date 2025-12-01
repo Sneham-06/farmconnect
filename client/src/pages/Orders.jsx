@@ -12,8 +12,8 @@ const Orders = () => {
     const fetchOrders = async () => {
         try {
             const endpoint = user.role === 'farmer'
-                ? 'http://localhost:5000/orders/farmer'
-                : 'http://localhost:5000/orders';
+                ? 'https://farmconnect-backend-m1p3.onrender.com/orders/farmer'
+                : 'https://farmconnect-backend-m1p3.onrender.com/orders';
 
             const res = await axios.get(endpoint, {
                 headers: { 'x-auth-token': token }
@@ -30,7 +30,7 @@ const Orders = () => {
 
     const handleStatusChange = async (id, newStatus) => {
         try {
-            await axios.put(`http://localhost:5000/orders/${id}/status`, { status: newStatus }, {
+            await axios.put(`https://farmconnect-backend-m1p3.onrender.com/orders/${id}/status`, { status: newStatus }, {
                 headers: { 'x-auth-token': token }
             });
             fetchOrders();

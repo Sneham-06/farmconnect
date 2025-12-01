@@ -30,7 +30,7 @@ const Signup = () => {
         setLoading(true);
         setError('');
         try {
-            const res = await axios.post('http://localhost:5000/auth/register', formData);
+            const res = await axios.post('https://farmconnect-backend-m1p3.onrender.com/auth/register', formData);
             localStorage.setItem('token', res.data.token);
             localStorage.setItem('user', JSON.stringify(res.data.user));
             navigate('/dashboard');

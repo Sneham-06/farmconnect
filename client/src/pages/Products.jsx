@@ -21,7 +21,7 @@ const Products = () => {
 
     const fetchProducts = async () => {
         try {
-            const res = await axios.get('http://localhost:5000/products', {
+            const res = await axios.get('https://farmconnect-backend-m1p3.onrender.com/products', {
                 headers: { 'x-auth-token': token }
             });
             setProducts(res.data);
@@ -37,7 +37,7 @@ const Products = () => {
     const handleDelete = async (id) => {
         if (window.confirm('Are you sure?')) {
             try {
-                await axios.delete(`http://localhost:5000/products/${id}`, {
+                await axios.delete(`https://farmconnect-backend-m1p3.onrender.com/products/${id}`, {
                     headers: { 'x-auth-token': token }
                 });
                 fetchProducts();
@@ -64,11 +64,11 @@ const Products = () => {
         e.preventDefault();
         try {
             if (currentProduct) {
-                await axios.put(`http://localhost:5000/products/${currentProduct._id}`, formData, {
+                await axios.put(`https://farmconnect-backend-m1p3.onrender.com/products/${currentProduct._id}`, formData, {
                     headers: { 'x-auth-token': token }
                 });
             } else {
-                await axios.post('http://localhost:5000/products', formData, {
+                await axios.post('https://farmconnect-backend-m1p3.onrender.com/products', formData, {
                     headers: { 'x-auth-token': token }
                 });
             }
