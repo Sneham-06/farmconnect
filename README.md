@@ -3,20 +3,29 @@
 FarmConnect is a full-stack web application that connects Farmers & Consumers directly — enabling product browsing, transaction tracking, market access, and language support for regional users.
 
 🚀 Live Demo:
+
 ✳️ Frontend: https://farmconnect-frontend-v7wn.onrender.com
 
 ✳️ GitHub Repository: https://github.com/Sneham-06/farmconnect/
 
 📘 About the Project
+
 FarmConnect is India's largest farmer-to-consumer digital platform, enabling farmers to sell their products directly to consumers.
+
 The app supports:
-Secure authentication (JWT)
+
+secure authentication (JWT)
+
 Language support (EN / HI / KN / TE)
+
 Protected routes & dashboard
+
 MongoDB-based storage
+
 Market price & orders tracking
 
 🔥 Features
+
 Feature	Description
 👤 User Roles	Farmer / Consumer
 🔐 Authentication	JWT-based Login & Signup
