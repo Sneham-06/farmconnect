@@ -44,85 +44,73 @@ Feature	Description
 
 🖥️ Frontend
 
-React + Vite
+•React + Vite
 
-React Router
+•React Router
 
-Tailwind CSS
+•Tailwind CSS
 
-i18next (Language Translation)
+•i18next (Language Translation)
 
 ⚙️ Backend
 
-Node.js
+•Node.js
 
-Express.js
+•Express.js
 
-MongoDB Atlas
+•MongoDB Atlas
 
-JWT Authentication
+•JWT Authentication
 
-Mongoose
+•Mongoose
 
 ☁️ Deployment
 
-Service	Platform
+Service 	  Platform
 
-Frontend	Render (Static Site)
+Frontend	  Render (Static Site)
 
-Backend	Render (Web Service)
+Backend   	Render (Web Service)
 
-Database	MongoDB Atlas
+Database 	 MongoDB Atlas
 
 
 🛠 Installation & Setup
 
 🔹 Clone the repo
-
-git clone https://github.com/Sneham-06/farmconnect.git
-
-cd farmconnect
+   git clone      
+https://github.com/Sneham-06/farmconnect.git
+  cd farmconnect
 
 🔹 Setup Backend
 
-cd server
-
-npm install
-
-npm start
+  cd server
+  npm install
+  npm start
 
 
 Create a .env file inside server/:
 
 MONGO_URI=your_mongo_uri
-
 JWT_SECRET=your_secret_key
-
 PORT=5000
 
 🔹 Setup Frontend
 
-cd ../client
-
-npm install
-
-npm run dev    # for development
-
-npm run build  # for production
+.  cd ../client
+   npm install
+   npm run dev    # for development
+   npm run build  # for production
 
 📡 API Endpoints (Sample)
 
-Method	Endpoint	Description
+Method   Endpoint        Description 
+POST	    /auth/register 	Register user
+POST	    /auth/login	    Login user
+GET	      /products    	Get all products
+POST	    /orders      	Place a new order
+GET	      /dashboar     	User dashboard
 
-POST	/auth/register	Register, user
-
-POST	/auth/login	Login user
-
-GET	/products	Get all products
-
-POST	/orders	Place a new order
-
-GET	/dashboard	User dashboard
 
 🚀 Future Enhancements
 
